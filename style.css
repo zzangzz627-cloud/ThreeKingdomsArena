@@ -236,3 +236,66 @@ footer{
 }
 
 }
+/* ===========================
+   장수 카드
+=========================== */
+
+.cardContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.generalCard{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    text-align:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+}
+
+.generalCard h3{
+
+    color:#7b2f24;
+
+    margin-bottom:10px;
+
+}
+
+.generalCard button{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:10px;
+
+    background:#b13a28;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.generalCard button:hover{
+
+    background:#d64d34;
+
+}
