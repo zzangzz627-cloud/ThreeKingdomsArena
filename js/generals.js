@@ -1,156 +1,92 @@
 const generals = [
-
-{
-    id:1,
-    name:"관우",
-    type:"무관",
-    camp:"촉",
-    force:98,
-    intel:82,
-    leadership:95,
-    politics:62,
-    charm:93,
-    rarity:"★★★★★",
-    skill:"청룡참",
-    image:"guanyu.svg"
-},
-
-{
-    id:2,
-    name:"장비",
-    type:"무관",
-    camp:"촉",
-    force:97,
-    intel:48,
-    leadership:90,
-    politics:30,
-    charm:78,
-    rarity:"★★★★★",
-    skill:"호통",
-    image:"zhangfei.svg"
-},
-
-{
-    id:3,
-    name:"조운",
-    type:"무관",
-    camp:"촉",
-    force:96,
-    intel:78,
-    leadership:94,
-    politics:68,
-    charm:91,
-    rarity:"★★★★★",
-    skill:"용맹돌격",
-    image:"zhaoyun.svg"
-},
-
-{
-    id:4,
-    name:"여포",
-    type:"무관",
-    camp:"기타",
-    force:100,
-    intel:35,
-    leadership:89,
-    politics:20,
-    charm:75,
-    rarity:"★★★★★",
-    skill:"귀신무쌍",
-    image:"lvbu.svg"
-},
-
-{
-    id:5,
-    name:"제갈량",
-    type:"문관",
-    camp:"촉",
-    force:30,
-    intel:100,
-    leadership:98,
-    politics:99,
-    charm:95,
-    rarity:"★★★★★",
-    skill:"팔진도",
-    image:"kongming.svg"
-},
-
-{
-    id:6,
-    name:"조조",
-    type:"문관",
-    camp:"위",
-    force:82,
-    intel:95,
-    leadership:96,
-    politics:94,
-    charm:92,
-    rarity:"★★★★★",
-    skill:"간웅",
-    image:"caocao.svg"
-},
-
-{
-    id:7,
-    name:"사마의",
-    type:"문관",
-    camp:"위",
-    force:60,
-    intel:99,
-    leadership:95,
-    politics:96,
-    charm:88,
-    rarity:"★★★★★",
-    skill:"내분",
-    image:"simayi.svg"
-},
-
-{
-    id:8,
-    name:"주유",
-    type:"문관",
-    camp:"오",
-    force:71,
-    intel:97,
-    leadership:94,
-    politics:90,
-    charm:93,
-    rarity:"★★★★★",
-    skill:"화공",
-    image:"zhouyu.svg"
-},
-
-{
-    id:9,
-    name:"손권",
-    type:"문관",
-    camp:"오",
-    force:70,
-    intel:90,
-    leadership:92,
-    politics:89,
-    charm:91,
-    rarity:"★★★★",
-    skill:"지휘",
-    image:"sunquan.svg"
-},
-
-{
-    id:10,
-    name:"감녕",
-    type:"무관",
-    camp:"오",
-    force:92,
-    intel:65,
-    leadership:88,
-    politics:40,
-    charm:84,
-    rarity:"★★★★",
-    skill:"기습",
-    image:"ganning.svg"
-}
-
+    {
+        id:1,
+        name:"관우",
+        type:"무관",
+        camp:"촉",
+        force:98,
+        intel:82,
+        skill:"청룡참"
+    },
+    {
+        id:2,
+        name:"장비",
+        type:"무관",
+        camp:"촉",
+        force:97,
+        intel:48,
+        skill:"호통"
+    },
+    {
+        id:3,
+        name:"조운",
+        type:"무관",
+        camp:"촉",
+        force:96,
+        intel:78,
+        skill:"용맹돌격"
+    },
+    {
+        id:4,
+        name:"제갈량",
+        type:"문관",
+        camp:"촉",
+        force:30,
+        intel:100,
+        skill:"팔진도"
+    },
+    {
+        id:5,
+        name:"조조",
+        type:"문관",
+        camp:"위",
+        force:82,
+        intel:95,
+        skill:"간웅"
+    },
+    {
+        id:6,
+        name:"여포",
+        type:"무관",
+        camp:"기타",
+        force:100,
+        intel:35,
+        skill:"귀신무쌍"
+    },
+    {
+        id:7,
+        name:"사마의",
+        type:"문관",
+        camp:"위",
+        force:60,
+        intel:99,
+        skill:"내분"
+    },
+    {
+        id:8,
+        name:"주유",
+        type:"문관",
+        camp:"오",
+        force:71,
+        intel:97,
+        skill:"화공"
+    },
+    {
+        id:9,
+        name:"손권",
+        type:"문관",
+        camp:"오",
+        force:70,
+        intel:90,
+        skill:"지휘"
+    },
+    {
+        id:10,
+        name:"감녕",
+        type:"무관",
+        camp:"오",
+        force:92,
+        intel:65,
+        skill:"기습"
+    }
 ];
-
-console.log("장수 데이터 로드 완료");
-console.log(generals);
