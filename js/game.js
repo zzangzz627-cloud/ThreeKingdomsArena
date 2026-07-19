@@ -1,60 +1,81 @@
 // ======================================
 // Three Kingdoms Arena
 // game.js
-// Version : v0.1 Alpha
+// Version 0.1.1
 // ======================================
 
-// 게임 시작 버튼
 const startBtn = document.getElementById("startBtn");
-
-// 게임 화면
 const gameArea = document.getElementById("gameArea");
 
-// 게임 시작
+let myTeam = [];
+let currentGenerals = [];
+
+// 게임 시작 버튼
 startBtn.addEventListener("click", startGame);
 
-// --------------------------
+// --------------------
 // 게임 시작
-// --------------------------
+// --------------------
 function startGame(){
 
-    // 장수 10명을 랜덤으로 섞는다.
-    const randomGenerals = shuffle([...generals]).slice(0,10);
+    myTeam = [];
 
-    drawGeneralCards(randomGenerals);
+    currentGenerals = shuffle([...generals]).slice(0,10);
+
+    drawCards();
 
 }
 
-// --------------------------
+// --------------------
 // 카드 출력
-// --------------------------
-function drawGeneralCards(list){
+// --------------------
+
+function drawCards(){
 
     let html = "";
 
-    html += "<h2>장수를 선택하세요 (5명)</h2>";
+    html += "<h2>우리 팀을 선택하세요 (5명)</h2>";
+
+    html += "<p>선택 : "+myTeam.length+" / 5</p>";
 
     html += "<div class='cardContainer'>";
 
-    list.forEach(general=>{
+    currentGenerals.forEach(g=>{
+
+        const selected = myTeam.includes(g.id);
 
         html += `
         <div class="generalCard">
 
-            <h3>${general.name}</h3>
+            <h3>${g.name}</h3>
 
-            <p>${general.type}</p>
+            <p>${g.camp}</p>
 
-            <p>⭐⭐ ${general.rarity}</p>
+            <p>${g.type}</p>
 
-            <p>⚔ 무력 : ${general.force}</p>
+            <p>${g.rarity}</p>
 
-            <p>🧠 지력 : ${general.intel}</p>
+            <hr>
 
-            <p>✨ ${general.skill}</p>
+            <p>⚔ 무력 ${g.force}</p>
 
-            <button onclick="selectGeneral(${general.id})">
-                선택
+            <p>🧠 지력 ${g.intel}</p>
+
+            <p>🛡 통솔 ${g.leadership}</p>
+
+            <p>🏛 정치 ${g.politics}</p>
+
+            <p>😊 매력 ${g.charm}</p>
+
+            <hr>
+
+            <p><b>${g.skill}</b></p>
+
+            <button
+                onclick="selectGeneral(${g.id})"
+                ${selected ? "disabled":""}
+            >
+                ${selected ? "선택완료":"선택"}
             </button>
 
         </div>
@@ -68,66 +89,5 @@ function drawGeneralCards(list){
 
 }
 
-// --------------------------
+// --------------------
 // 장수 선택
-// --------------------------
-
-const myTeam = [];
-
-function selectGeneral(id){
-
-    if(myTeam.includes(id)){
-
-        alert("이미 선택한 장수입니다.");
-
-        return;
-
-    }
-
-    myTeam.push(id);
-
-    alert("선택 완료!");
-
-    if(myTeam.length===5){
-
-        finishSelect();
-
-    }
-
-}
-
-// --------------------------
-// 선택 완료
-// --------------------------
-
-function finishSelect(){
-
-    gameArea.innerHTML=`
-
-    <h2>우리 팀 완성!</h2>
-
-    <p>선택한 장수 : ${myTeam.length}명</p>
-
-    <p>다음 버전에서는 AI 팀 생성 및 전투가 시작됩니다.</p>
-
-    `;
-
-}
-
-// --------------------------
-// 배열 섞기
-// --------------------------
-
-function shuffle(array){
-
-    for(let i=array.length-1;i>0;i--){
-
-        const j=Math.floor(Math.random()*(i+1));
-
-        [array[i],array[j]]=[array[j],array[i]];
-
-    }
-
-    return array;
-
-}
