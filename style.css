@@ -1,1 +1,238 @@
 
+/* ======================================
+   Three Kingdoms Arena
+   Version : v0.1 Alpha
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:
+    "Malgun Gothic",
+    "맑은 고딕",
+    sans-serif;
+
+    background:#d8c7a1;
+
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,.12),
+        rgba(0,0,0,.08)
+    );
+
+    min-height:100vh;
+
+    color:#222;
+
+}
+
+/* =======================
+      HEADER
+======================= */
+
+.header{
+
+    text-align:center;
+
+    background:#6b2d1f;
+
+    color:white;
+
+    padding:25px;
+
+    border-bottom:6px solid #b58b47;
+
+}
+
+.header h1{
+
+    font-size:38px;
+
+}
+
+.header h2{
+
+    margin-top:10px;
+
+    font-size:22px;
+
+}
+
+.version{
+
+    margin-top:10px;
+
+    opacity:.8;
+
+}
+
+/* =======================
+      MAIN
+======================= */
+
+main{
+
+    width:95%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+/* =======================
+      MENU
+======================= */
+
+#mainMenu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+/* =======================
+      BUTTON
+======================= */
+
+.menuBtn{
+
+    padding:18px;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:#b13a28;
+
+    color:white;
+
+    transition:.25s;
+
+    font-weight:bold;
+
+}
+
+.menuBtn:hover{
+
+    background:#d64d34;
+
+    transform:scale(1.02);
+
+}
+
+.menuBtn:disabled{
+
+    background:#888;
+
+    cursor:not-allowed;
+
+}
+
+/* =======================
+      GAME AREA
+======================= */
+
+#gameArea{
+
+    margin-top:40px;
+
+    background:#f5ebd2;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:0 0 12px rgba(0,0,0,.25);
+
+}
+
+#gameArea h2{
+
+    color:#7b2f24;
+
+    margin-bottom:15px;
+
+}
+
+#messageBox{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    background:white;
+
+    border-left:8px solid #7b2f24;
+
+    line-height:1.8;
+
+}
+
+/* =======================
+      FOOTER
+======================= */
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#333;
+
+}
+
+/* =======================
+      MOBILE
+======================= */
+
+@media(max-width:600px){
+
+.header h1{
+
+    font-size:30px;
+
+}
+
+.header h2{
+
+    font-size:18px;
+
+}
+
+.menuBtn{
+
+    font-size:18px;
+
+    padding:15px;
+
+}
+
+#gameArea{
+
+    padding:18px;
+
+}
+
+}
